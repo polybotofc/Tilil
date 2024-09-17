@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆∆←×™%™©©©%%%</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #222;
+    }
+
+    h1 {
+      font-size: 5rem;
+      animation: warna 2s infinite;
+    }
+
+    .floating-text {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      color: #fff;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes warna {
+      0% { color: rgb(255, 0, 0); }
+      25% { color: rgb(0, 255, 0); }
+      50% { color: rgb(0, 0, 255); }
+      75% { color: rgb(255, 255, 0); }
+      100% { color: rgb(255, 0, 255); }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(-50%) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-45%) rotate(15deg);
+      }
+      100% {
+        transform: translateY(-50%) rotate(0deg);
+      }
+    }
+  </style>
+</head>
+<body>
+   <center>
+  <h1 id="mainText">yahahaha nurut</h1>
+  </center>
+  <div class="floating-text" id="floatingText">😂😂😂😂</div>
+  <script>
+    const mainText = document.getElementById('mainText');
+    const floatingText = document.getElementById('floatingText');
+
+    // Ubah warna teks utama secara acak setiap 2 detik
+    setInterval(() => {
+      mainText.style.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+    }, 2000);
+
+    // Ubah warna teks melayang secara acak setiap 1 detik
+    setInterval(() => {
+      floatingText.style.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
+    }, 1000);
+
+    // Tambahkan event listener untuk mengubah teks utama saat diklik
+    mainText.addEventListener('click', () => {
+      mainText.textContent = 'TOLOL banget';
+    });
+  </script>
+</body>
+</html>
